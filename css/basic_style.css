@@ -1,0 +1,115 @@
+
+body {
+	background-color: #DC9B8B;
+}
+
+h1 {
+	color: rgba(8,141,165,1);
+	margin-left: 65px;
+	text-shadow: 1px .5px 4px rgba(0,0,0, 0.6);
+}
+
+.container {
+	width: 460px;
+	height: 113px;
+	background-color: #d7ecfd;
+	border: 10px double;
+	border-radius: 2%;
+}
+
+/* --------------------------------------------
+	SELECT ALL SQUARES IN THE ARRAY
+-----------------------------------------------*/
+.container .squares:nth-child(-n+4) {
+	background-image: url("../icons/smileyface2.png");
+	color: #90d9e5;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	border: 2px solid black;
+	border-radius: 25%;
+	cursor: pointer;
+	transition: transform 5s ease-in-out;
+}
+
+/* --------------------------------------------
+	SELECT ALL SQUARES PARAGRAPHS IN THE ARRAY
+-----------------------------------------------*/
+.squares:nth-child(-n+4) p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	font-weight: 900;
+	text-align: center;
+	margin: 0;
+	text-shadow: 2px 1px 4px rgba(0,0,0, 0.8);
+}
+
+/* --------------------------------------------
+	INDIVIDUALLY SELECT A SQUARE IN THE ARRAY
+-----------------------------------------------*/
+.squares:nth-child(1) {
+	background: #9c6b77;
+}
+
+.squares:nth-child(2) {
+	background: #c1909d;
+}
+
+.squares:nth-child(3) {
+	background: #deb4b7;
+}
+
+.squares:nth-child(4) {
+	background: #f7c9cc;
+}
+
+/* ----------------------------------------------
+	HOVER, TRANSLATE & TRANSFORM EFFECTS
+-------------------------------------------------*/
+.container .squares:nth-child(-n+4):hover {
+	background-image: url("../icons/smileyface1.png");
+	transform: scale(.5);
+	animation-name: race;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(2.5,.2,.3,2);
+}
+
+.squares:nth-child(1):hover {
+	background: #9a6c61;
+}
+
+.squares:nth-child(2):hover {
+	background: #b07c6f;
+}
+
+.squares:nth-child(3):hover  {
+	background: #c68b7d;
+}
+
+.squares:nth-child(4):hover  {
+	background: #dc9b8b;
+}
+
+.button:hover {
+	background-color: #33fb14;
+	color:#fff;
+	cursor: pointer;
+}
+
+/*--------------------------------------------------
+	ANIMATION EFFECTS
+----------------------------------------------------*/
+@keyframes race {
+	0%, 100% {
+		transform: translateY(0px);
+		background-image: url("../icons/smileyface1.png");
+	}
+	50% {
+		transform: translateY(330px);
+	}
+}
+
+
+
